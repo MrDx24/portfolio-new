@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  --primary-color: #002e1f;
+  --secondary-color: #000000;
+  --font-head-color: #f7f797; /*#e0e0e0#f0f095*/
+  --font-slg-color: #df9100;
+  --font-slgtr-color: rgba(224, 182, 43, 0.322);
+}
+
+.linebr {
+  border: 1px solid white;
+}
+
+/* Navbar containers------------------------------------------------------- */
+.nav{
+  background-color: #0a0a0a;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  overflow: hidden;
+  /* cursor: url('../../assets/images/hand1.png'), auto; */
+}
+
+.nav-bar {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav-items{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  padding: 4px;;
+}
+
+/* Logo, Items ------------------------------------------------------- */
+
+.logoicon {
+  font-size: 4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0;
+}
+
+.item,.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0.2rem 0;
+  padding: 0.5rem 0.5rem;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  border: 5px solid transparent;
+  background-color: var(--primary-color);
+  color: var(--font-head-color);
+  overflow: hidden;
+  transition: all 0.7s ease-in-out;
+}
+
+.logo h1,
+.logo h5{
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo h4 {
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  padding: 0.2rem 0;
+}
+
+.logo h1 {
+  width: max-content;
+}
+
+.logo h5{
+  opacity: 0;
+  width: max-content;
+  border-bottom: 0.2rem solid var(--font-slg-color);
+  padding: 0.2rem 0;
+  transition: all 1s ease-in-out;
+}
+
+.logo:hover h1 {
+  transition: all 1.2s ease-in-out;
+}
+
+.logo:hover h5 {
+  opacity: 1;
+  color: var(--font-slg-color);
+  transition: all 1.2s ease-in-out;
+}
+
+.item h4 {
+  position: absolute;
+  top: 9rem;
+  z-index: 2;
+  color: var(--font-slg-color);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.nos {
+  position: absolute;
+  z-index: 9;
+  font-family: 'Sarabun', sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  top: 65%;
+  left: 2%;
+  opacity: 0;
+  color: var(--font-slgtr-color);
+  transition: all 1s ease-in-out;
+}
+
+#item4 .nos {
+  left: 4%;
+}
+
+.item:hover .nos {
+  opacity: 1;
+}
+
+.item:hover h4 {
+  top: 4.5rem;
+  opacity: 1;
+}
+
+/* Letter - D ------------------------------------------------------- */
+#item1{
+  border-top-right-radius: 15rem;
+  box-shadow: 1px -1px 0px 1px var(--font-slg-color);
+}
+#item2{
+  border-bottom-right-radius: 15rem;
+  box-shadow: 1px 1px 0px 1px var(--font-slg-color);
+}
+
+/* Letter - P ------------------------------------------------------- */
+#item3{
+  border-top-right-radius: 15rem;
+  border-bottom-right-radius: 15rem;
+  box-shadow: 1px -1px 0px 1px var(--font-slg-color);
+}
+#item4{
+  width: 50%;
+  box-shadow: 1px 1px 0px 1px var(--font-slg-color);
+  align-self: flex-start;
+}
+
+/* Letter - last ------------------------------------------------------- */
+
+#item5{
+  position: relative;
+  padding: 0;
+  background-color: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border: none;
+}
+
+
+svg{
+  width: max-content;
+  height: max-content;
+}
+
+circle {
+  transition: all 0.5s ease-in-out;
+}
+
+#at{
+  pointer-events: none;
+  z-index: 99;
+}
+
+svg:hover {
+  animation: rtrg 6s linear infinite;
+}
+
+svg:hover circle {
+  fill: var(--font-head-color);
+  stroke: var(--primary-color);
+  stroke-width: 2rem;
+}
+
+svg:hover #at {
+  display: block;
+  fill: var(--font-slg-color);
+}
+
+
+@keyframes rtrg {
+
+  from {
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* Cursor ------------------------------------------------------- */
+.custom-cursor {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  pointer-events: none;
+  z-index: 9;
+  transition: transform 0.5s ease;
+}
+
+.grow{
+  width: 20px;
+  height: 20px;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor i {
+  z-index: 99;
+  color: #000;
+  font-size: 2rem;
+}
+
+
+
+/* media queries -------------------------------------------------------- */
+
+/* `sm` applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 575.99px) {
+
+  .nav{
+    overflow: scroll;
+  }
+
+  .nav-bar {
+    overflow: visible;
+  }
+
+  .item,.logo {
+    height: 35vh;
+  }
+
+  .logoicon {
+    font-size: 2rem;
+  }
+
+  .logo h4 {
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .logo h4 {
+    font-size: 1.2rem;
+    padding: 0;
+  }
+
+  .logo h5 {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .item h4 {
+    position: relative;
+    opacity: 1;
+    top: 0;
+  }
+
+  .item:hover h4 {
+    top: 0;
+  }
+
+  .nos {
+    position: relative;
+    top: 0;
+    opacity: 1;
+  }
+
+  #item5 {
+    padding: 1rem;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg{
+    width: 90%;
+    height: max-content;
+  }
+
+  .custom-cursor{
+    display: none;
+  }
+
+  .grow {
+    display: none;
+  }
+
+}
+
+/* `md` applies to small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.99px) {
+
+  .nav{
+    overflow: scroll;
+  }
+
+  .nav-bar {
+    overflow: visible;
+  }
+
+  .nav-items{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+    padding-right: 10px;
+  }
+
+  .item,.logo {
+    height: 25vh;
+  }
+
+  .logoicon {
+    font-size: 4.5rem;
+  }
+
+  .logo h1 {
+    font-size: 2.5rem;
+    padding: 0;
+  }
+
+  .logo h4 {
+    font-size: 2.2rem;
+    padding: 0;
+  }
+
+  .logo h5 {
+    font-size: 2rem;
+    padding: 0;
+  }
+
+  .item h1 {
+    font-size: 3rem;
+  }
+
+  .item h4 {
+    position: relative;
+    opacity: 1;
+    top: 0;
+    font-size: 2rem;
+  }
+
+  .item:hover h4 {
+    top: 0;
+  }
+
+  .nos {
+    position: relative;
+    font-size: 5rem;
+    top: 30%;
+    opacity: 1;
+  }
+
+  #item1 {
+    border-top-right-radius: 20rem;
+  }
+
+  #item2 {
+    border-bottom-right-radius: 20rem;
+  }
+
+  #item3,
+  #item4 {
+    height: 30vh;
+  }
+
+  #item3 .nos,
+  #item4 .nos {
+    top: 40%;
+  }
+
+  #item5 {
+    padding: 1rem;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  svg{
+    width: 70%;
+    height: max-content;
+  }
+
+  .custom-cursor{
+    display: none;
+  }
+
+  .grow {
+    display: none;
+  }
+
+}
+
+/* `lg` applies to medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+
+
+}
+
+/* `xl` applies to large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+
+
+}
+
+/* `xxl` applies to x-large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+
+
+}
+
+
