@@ -70,27 +70,17 @@ h1 h5{
   border-left: 2px solid var(--font-slg-color);
 }
 
-.contactform {
-  padding: 1rem;
-  background-color: var(--primary-color);
-  color: var(--font-slg-color);
-}
-
-.locemsc p {
+.locemsc h4 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
   font-weight: 600;
-  color: var(--font-head-color);
 }
-
 .locemsc a {
+  padding: 0;
   color: var(--font-slg-color);
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
-.contactform {
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 
 /* details -------------------------------------------------------- */
