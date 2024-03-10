@@ -1,1 +1,64 @@
-<p>projects works!</p>
+<!-- <p>projects works!</p> -->
+
+
+<div class="container-fluid nav">
+  <div class="row nav-bar">
+
+    <a routerLink="/dashboard">
+      <i class="bi-arrow-left"></i> DP.
+    </a>
+    <h1 class="title">Projects
+      <h5>Productivity Details</h5>
+    </h1>
+
+
+    <div *ngFor="let p of projects, let i = index"
+      class="card-holder {{p.class}} col-sm-6 col-12">
+
+        <div class="content-text">
+          <span>
+            0{{ i+1 }}
+            <a class="btndetails" data-bs-toggle="modal" attr.data-bs-target="#{{p.id}}">
+              <span class="info" style="float: right;">
+                <span>Click here to expand</span>&nbsp;
+                <i class="bi-arrows-angle-expand"></i>
+              </span>
+            </a>
+          </span>
+          <h5> {{ p.title }} </h5>
+        </div>
+
+
+       <!-- Modal -->
+        <div class="modal fade" [id]="p.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{ p.title }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <h6>Timeline :</h6>
+                <p> {{ p.timeline }} </p>
+                <hr>
+                <h6>Keywords :</h6>
+                <p>  {{ p.keywords }} </p>
+                <hr>
+                <h6>Description :</h6>
+                <span>
+                  <ul>
+                    <li *ngFor="let i of p.description.split('.')">
+                      {{ i }}
+                    </li>
+                  </ul>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+</div>

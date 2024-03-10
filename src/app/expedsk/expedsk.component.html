@@ -1,0 +1,57 @@
+<!-- <p>expedsk works!</p>  -->
+
+<!-- <p>projects works!</p> -->
+
+
+<div class="container-fluid nav">
+  <div class="row nav-bar">
+
+    <a routerLink="/dashboard">
+      <i class="bi-arrow-left"></i> DP.
+    </a>
+    <h1 class="title">Experience & Skills
+      <h5>What I have done till know</h5>
+    </h1>
+
+    <div class="card-holder col-12">
+
+      <div class="content-text col-lg-4 col-md-4 col-sm-12 col-12" >
+
+        <div class="skills" >
+          <h4>Skills</h4>
+          <hr>
+          <div class="sphere "></div>
+        </div>
+
+        <div class="education">
+          <h4>Education</h4>
+          <hr>
+          <h5>AISSMS IOIT</h5>
+          <h6>August 2018 - June 2021</h6>
+          <hr style="border-color: #f7f797;">
+          <h5>MIT Polytechnic, Pune</h5>
+          <h6>June 2015 - June 2018</h6>
+
+        </div>
+      </div>
+      <div class="content-text col-lg-7 col-md-7 col-sm-6 col-12">
+        <h4>Experience</h4>
+        <hr>
+        <div class="experience">
+          <h5>Birlasoft</h5>
+          <h6>September 2021 - Present</h6>
+          <hr>
+          <h5>Roles & Responsibilties: </h5>
+          <ul>
+            <li *ngFor="let i of roles" >
+              <span>{{ i.kywds }}: </span> {{ i.text }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
