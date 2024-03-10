@@ -1,1 +1,5 @@
 /* /index.html 200
+/contactme  /app/contactme/contactme.component.html 200
+/aboutme  /app/aboutme/aboutme.component.html 200
+/projects  /app/projects/projects.component.html 200
+/exp-ed-sk  /app/expedsk/expedsk.component.html 200
